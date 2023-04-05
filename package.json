@@ -5,7 +5,8 @@
   "description": "[![Actions Status](https://github.com/SashaTolkodubova/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/SashaTolkodubova/frontend-project-44/actions)",
   "main": "index.js",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^8.37.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
