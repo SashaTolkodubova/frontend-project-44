@@ -22,7 +22,7 @@ const startRound = () => {
   const correctAnswer = getGreatestCommonDivisor(randomNumber1, randomNumber2);
   return [question, correctAnswer];
 };
-const runGame = () => startGames(rule, startRound);
-runGame();
+const progressGame = () => startGames(rule, startRound);
+progressGame();
 
-export default runGame;
+export default progressGame;
