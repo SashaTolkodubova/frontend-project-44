@@ -34,6 +34,6 @@ const startRound = () => {
   const question = `Question: ${progression.join(' ')}`;
   return [question, correctAnswer];
 };
-const runGame = () => startGames(rule, startRound);
-runGame();
-export default runGame;
+const progressGame = () => startGames(rule, startRound);
+progressGame();
+export default progressGame;
