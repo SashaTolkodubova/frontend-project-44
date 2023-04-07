@@ -37,7 +37,7 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-const runGame = () => startGames(rule, startRound);
-runGame();
+const progressGame = () => startGames(rule, startRound);
+progressGame();
 
-export default runGame;
+export default progressGame;
