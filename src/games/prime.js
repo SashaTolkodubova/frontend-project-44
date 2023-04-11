@@ -1,4 +1,5 @@
 import startGames from '../index.js';
+import getRandomInRange from '../utils.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -14,13 +15,13 @@ const isNumberPrime = (number) => {
   return true;
 };
 
-const startRound = () => {
-  const randomNumber = Math.round(Math.random() * 100);
-  const question = `Question: ${randomNumber}`;
+const generateRound = () => {
+  const randomNumber = getRandomInRange(100, 0);
+  const question = randomNumber;
   const correctAnswer = (isNumberPrime(randomNumber) ? 'yes' : 'no');
   return [question, correctAnswer];
 };
 
-const progressGame = () => startGames(rule, startRound);
+const progressGame = () => startGames(rule, generateRound);
 
 export default progressGame;

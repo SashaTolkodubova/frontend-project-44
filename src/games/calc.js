@@ -1,41 +1,32 @@
 import startGames from '../index.js';
-
-const randomOperatorGenerator = () => {
-  const operators = ['+', '-', '*'];
-  const randomIndex = Math.floor(Math.random() * operators.length);
-  const operator = operators[randomIndex];
-  return operator;
-};
+import getRandomInRange from '../utils.js';
 
 const rule = 'What is the result of the expression?';
 
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[getRandomInRange(operators.length - 1, 0)];
+};
+
 const calculate = (num1, num2, operator) => {
-  let answer;
   switch (operator) {
-    case '+':
-      answer = `${num1 + num2}`;
-      break;
-    case '-':
-      answer = `${num1 - num2}`;
-      break;
-    case '*':
-      answer = `${num1 * num2}`;
-      break;
+    case '+': return `${num1 + num2}`;
+    case '-': return `${num1 - num2}`;
+    case '*': return `${num1 * num2}`;
     default:
       throw new Error(`Unknown operator: '${operator}'`);
   }
-  return answer;
 };
 
-const startRound = () => {
-  const randomNumber1 = Math.round(Math.random() * 10);
-  const randomNumber2 = Math.round(Math.random() * 10);
-  const operator = randomOperatorGenerator();
-  const question = `Question: ${randomNumber1} ${operator} ${randomNumber2}`;
+const generateRound = () => {
+  const randomNumber1 = getRandomInRange(10, 0);
+  const randomNumber2 = getRandomInRange(10, 0);
+  const operator = getRandomOperator();
+  const question = `${randomNumber1} ${operator} ${randomNumber2}`;
   const correctAnswer = calculate(randomNumber1, randomNumber2, operator);
   return [question, correctAnswer];
 };
 
-const progressGame = () => startGames(rule, startRound);
+const progressGame = () => startGames(rule, generateRound);
 
 export default progressGame;

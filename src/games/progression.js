@@ -1,9 +1,5 @@
 import startGames from '../index.js';
-
-const generateRandomNumber = (max = 100, min = 0) => {
-  const randomized = Math.floor(Math.random() * (max - min + 1)) + min;
-  return randomized;
-};
+import getRandomInRange from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
 
@@ -17,21 +13,18 @@ const randomProgression = (a, step, b) => {
   return progression;
 };
 
-const startRound = () => {
-  const firstNumber = generateRandomNumber();
-  const stepMax = 10;
-  const stepMin = 1;
-  const stepSize = generateRandomNumber(stepMax, stepMin);
-  const lengthMax = 10;
-  const lengthMin = 5;
-  const lengthProgression = generateRandomNumber(lengthMax, lengthMin);
+const generateRound = () => {
+  const firstNumber = getRandomInRange(100, 0);
+  const stepSize = getRandomInRange(10, 2);
+  const lengthProgression = getRandomInRange(10, 5);
   const progression = randomProgression(firstNumber, stepSize, lengthProgression);
   const indexMax = lengthProgression - 1;
-  const index = generateRandomNumber(indexMax);
+  const index = getRandomInRange(indexMax);
   const correctAnswer = progression[index].toString();
   progression[index] = '..';
-  const question = `Question: ${progression.join(' ')}`;
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
-const progressGame = () => startGames(rule, startRound);
+
+const progressGame = () => startGames(rule, generateRound);
 export default progressGame;

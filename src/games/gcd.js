@@ -1,4 +1,5 @@
 import startGames from '../index.js';
+import getRandomInRange from '../utils.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
@@ -14,13 +15,15 @@ const getGreatestCommonDivisor = (number1, number2) => {
   }
   return a.toString();
 };
-const startRound = () => {
-  const randomNumber1 = Math.floor(Math.random() * 10) + 1;
-  const randomNumber2 = Math.floor(Math.random() * 10) + 1;
-  const question = `Question: ${randomNumber1} ${randomNumber2}`;
+
+const generateRound = () => {
+  const randomNumber1 = getRandomInRange(10, 1);
+  const randomNumber2 = getRandomInRange(10, 1);
+  const question = `${randomNumber1} ${randomNumber2}`;
   const correctAnswer = getGreatestCommonDivisor(randomNumber1, randomNumber2);
   return [question, correctAnswer];
 };
-const progressGame = () => startGames(rule, startRound);
+
+const progressGame = () => startGames(rule, generateRound);
 
 export default progressGame;
