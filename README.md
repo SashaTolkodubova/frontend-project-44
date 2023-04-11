@@ -4,11 +4,11 @@
 <h3>Description</h3>
 <p>Brain-Games is a set of five console games based on popular mobile brain training apps. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered to be completed. Wrong answers end the game and offer to play it again.</p>
 <ul>
-<li>-Calculator. Arithmetic expressions to be evaluated.</li>
-<li>-Progression. Search for missing numbers in a sequence of numbers.</li>
-<li>-Definition of an even number.</li>
-<li>-Finding the Greatest Common Divisor.</li>
-<li>-Definition of a prime number.</li></ul>
+<li>Calculator. Arithmetic expressions to be evaluated.</li>
+<li>Progression. Search for missing numbers in a sequence of numbers.</li>
+<li>Definition of an even number.</li>
+<li>Finding the Greatest Common Divisor.</li>
+<li>Definition of a prime number.</li></ul>
 
 <h3>Setup</h3>
 <ul>
