@@ -8,12 +8,25 @@
 <p>-Definition of an even number.</p>
 <p>-Finding the Greatest Common Divisor.</p>
 <p>-Definition of a prime number.</p>
+
 <h3>Setup</h3>
-<button>git clone git@github.com:dmitry1178/frontend-project-44.git
-cd frontend-project-44
-make install
-npm install
-npm link</button>
+<p>git@github.com:SashaTolkodubova/frontend-project-4444.git</p>
+<p>cd frontend-project-4444</p>
+<p>make install</p>
+<p>npm install</p>
+<p>npm link</p>
+
+<h3>Running the games:</h3> 
+<p>To run the games, enter these commands at the command prompt:</p>
+<ul>
+<li>brain-even to start the Even or Not</li>
+<li>brain-calc to start the Calculator</li>
+<li>brain-gcd to start the Greatest Common Divisor</li>
+<li>brain-progression to start the Missing Number in Progression</li>
+<li>brain-prime to start the Prime Number</li>
+</ul>
+
+<h3>Records with game examples</h3>
 <a href="https://asciinema.org/a/nnabWYBcNY9ZNByEVTBbVM83l" target="_blank"><img src="https://asciinema.org/a/nnabWYBcNY9ZNByEVTBbVM83l.svg" /></a>
 <a href="https://asciinema.org/a/5hSqMZLqsTaJot651Dy7VRKdc" target="_blank"><img src="https://asciinema.org/a/5hSqMZLqsTaJot651Dy7VRKdc.svg" /></a>
 <a href="https://asciinema.org/a/EqCg1ZYiAw1bzuj7gjlD8gewO" target="_blank"><img src="https://asciinema.org/a/EqCg1ZYiAw1bzuj7gjlD8gewO.svg" /></a>
