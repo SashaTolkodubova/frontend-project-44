@@ -14,17 +14,18 @@ const randomProgression = (a, step, b) => {
 };
 
 const generateRound = () => {
-  const firstNumber = getRandomInRange(100, 0);
-  const stepSize = getRandomInRange(10, 2);
-  const lengthProgression = getRandomInRange(10, 5);
+  const firstNumber = getRandomInRange(0, 100);
+  const stepSize = getRandomInRange(2, 10);
+  const lengthProgression = getRandomInRange(5, 10);
   const progression = randomProgression(firstNumber, stepSize, lengthProgression);
   const indexMax = lengthProgression - 1;
-  const index = getRandomInRange(indexMax);
+  const index = getRandomInRange(0, indexMax);
   const correctAnswer = progression[index].toString();
   progression[index] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
 
-const progressGame = () => startGames(rule, generateRound);
-export default progressGame;
+const runProgressionGame = () => startGames(rule, generateRound);
+
+export default runProgressionGame;

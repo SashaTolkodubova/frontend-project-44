@@ -16,12 +16,12 @@ const isNumberPrime = (number) => {
 };
 
 const generateRound = () => {
-  const randomNumber = getRandomInRange(100, 0);
+  const randomNumber = getRandomInRange(0, 100);
   const question = randomNumber;
   const correctAnswer = (isNumberPrime(randomNumber) ? 'yes' : 'no');
   return [question, correctAnswer];
 };
 
-const progressGame = () => startGames(rule, generateRound);
+const runPrimeGame = () => startGames(rule, generateRound);
 
-export default progressGame;
+export default runPrimeGame;

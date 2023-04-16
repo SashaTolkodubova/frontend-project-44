@@ -13,17 +13,17 @@ const getGreatestCommonDivisor = (number1, number2) => {
       b -= a;
     }
   }
-  return a.toString();
+  return a;
 };
 
 const generateRound = () => {
-  const randomNumber1 = getRandomInRange(10, 1);
-  const randomNumber2 = getRandomInRange(10, 1);
+  const randomNumber1 = getRandomInRange(1, 10);
+  const randomNumber2 = getRandomInRange(1, 10);
   const question = `${randomNumber1} ${randomNumber2}`;
-  const correctAnswer = getGreatestCommonDivisor(randomNumber1, randomNumber2);
+  const correctAnswer = String(getGreatestCommonDivisor(randomNumber1, randomNumber2));
   return [question, correctAnswer];
 };
 
-const progressGame = () => startGames(rule, generateRound);
+const runGcdGame = () => startGames(rule, generateRound);
 
-export default progressGame;
+export default runGcdGame;
