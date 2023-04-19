@@ -18,10 +18,9 @@ const generateRound = () => {
   const stepSize = getRandomInRange(2, 10);
   const lengthProgression = getRandomInRange(5, 10);
   const progression = randomProgression(firstNumber, stepSize, lengthProgression);
-  const indexMax = lengthProgression - 1;
-  const index = getRandomInRange(0, indexMax);
-  const correctAnswer = progression[index].toString();
-  progression[index] = '..';
+  const hiddenIndex = getRandomInRange(0, lengthProgression - 1);
+  const correctAnswer = String(progression[hiddenIndex]);
+  progression[hiddenIndex] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
